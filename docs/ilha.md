@@ -1,3 +1,24 @@
+Indice:
+- [Empresa](#empresa)
+	- [nextlevel](#nextlevel)
+		- [ev.nextlevel](#evnextlevel)
+		- [api.nextlevel](#apinextlevel)
+- [Produtos](#produtos)
+	- [XtraPower](#xtrapower)
+	- [XtraPower Gel](#xtrapower-gel)
+	- [Tesão de Vaca](#tes%C3%A3o-de-vaca)
+	- [Bomba Peniana](#bomba-peniana)
+	- [SkinGold](#skingold)
+- [Dominios](#dominios)
+- [Advertoriais](#advertoriais)
+	- [Fora da ilha - Localweb](#fora-da-ilha---localweb)
+		- [https://crescerbembrasil.com](#httpscrescerbembrasilcom)
+		- [https://ultracuriosoblog.com](#httpsultracuriosoblogcom)
+		- [https://xbrasilvideos.com](#httpsxbrasilvideoscom)
+
+-----
+
+Este ilha se localiza no DigitalOcean, exceções serão citadas.
 
 # Empresa
 
@@ -5,18 +26,15 @@
 
 * https://nextlevelmarketing.com.br/
   
-Porta: http://68.183.150.108:8070
 <!-- 
 ~~~
-/etc/nginx/sites-available/$
-sudo nano nextlevel.conf
 server {
-	listen 8070;
-	listen [::]:8070;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8070;
+        server_name www.nextlevelmarketing.com.br nextlevelmarketing.com.br;
 
-	root /var/www/html/nextlevel;
+	root /var/www/html/empresa/nextlevel;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -24,25 +42,30 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/nextlevelmarketing.com.br/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/nextlevelmarketing.com.br/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
-ln -s /etc/nginx/sites-available/nextlevel.conf ../sites-enabled/nextlevel
-~~~ -->
+
+~~~
+-->
 
 ### ev.nextlevel
 
 * https://ev.nextlevelmarketing.com.br/
 
-Porta: http://68.183.150.108:8071
 <!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano ev-nextlevel.conf
 server {
-	listen 8071;
-	listen [::]:8071;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8071;
+        server_name ev.nextlevelmarketing.com.br;
 
-	root /var/www/html/nextlevel;
+	root /var/www/html/empresa/ev-nextlevel;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -50,25 +73,30 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/api.nextlevelmarketing.com.br/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/api.nextlevelmarketing.com.br/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 }
-ln -s /etc/nginx/sites-available/ev-nextlevel.conf ../sites-enabled/ev-nextlevel
 ~~~ -->
 
 ### api.nextlevel
 
 * https://api.nextlevelmarketing.com.br/
 
-Porta: http://68.183.150.108:8072
-<!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano api-nextlevel.conf
+<!-- 
+~~~
 server {
-	listen 8072;
-	listen [::]:8072;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8072;
+        server_name api.nextlevelmarketing.com.br;
 
-	root /var/www/html/api-nextlevel;
+	root /var/www/html/empresa/api-nextlevel;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -76,26 +104,31 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/api.nextlevelmarketing.com.br/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/api.nextlevelmarketing.com.br/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 }
-ln -s /etc/nginx/sites-available/api-nextlevel.conf ../sites-enabled/api-nextlevel
-~~~ -->
+~~~
+ -->
 
 # Produtos
 
 ## XtraPower
 * https://xtrapoweroficial.com/
 
-Porta: http://68.183.150.108:8073
 <!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano xtrapower.conf
 server {
-	listen 8073;
-	listen [::]:8073;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8073;
+        server_name www.xtrapoweroficial.com xtrapoweroficial.com;
 
-	root /var/www/html/xtrapower;
+	root /var/www/html/produtos/xtrapower;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -103,24 +136,30 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/www.xtrapoweroficial.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/www.xtrapoweroficial.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
 }
-ln -s /etc/nginx/sites-available/xtrapower.conf ../sites-enabled/xtrapower
+
 ~~~ -->
 ## XtraPower Gel
 
 * https://gel.xtrapoweroficial.com/
 
-Porta: http://68.183.150.108:8074
 <!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano gel-xtrapower.conf
 server {
-	listen 8074;
-	listen [::]:8074;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8074;
+        server_name gel.xtrapoweroficial.com;
 
-	root /var/www/html/gel-xtrapower;
+	root /var/www/html/produtos/gel-xtrapower;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -128,24 +167,29 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 }
-ln -s /etc/nginx/sites-available/gel-xtrapower.conf ../sites-enabled/gel-xtrapower
+
 ~~~ -->
 ## Tesão de Vaca
 
 * https://tesaodevaca.xtrapoweroficial.com/
 
-Porta: http://68.183.150.108:8075
 <!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano tesaodevaca-xtrapower.conf
 server {
-	listen 8075;
-	listen [::]:8075;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8075;
+        server_name tesaodevaca.xtrapoweroficial.com;
 
-	root /var/www/html/tesaodevaca-xtrapower;
+	root /var/www/html/produtos/tesaodevaca-xtrapower;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -153,26 +197,31 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 }
-ln -s /etc/nginx/sites-available/tesaodevaca-xtrapower.conf ../sites-enabled/tesaodevaca-xtrapower
+
 ~~~ -->
 
 ## Bomba Peniana
 
 * https://bombapeniana.xtrapoweroficial.com/
 
-Porta: http://68.183.150.108:8076
 <!-- 
 ~~~
-/etc/nginx/sites-available/$
-sudo nano bombapeniana-xtrapower.conf
 server {
-	listen 8076;
-	listen [::]:8076;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8076;
+        server_name bombapeniana.xtrapoweroficial.com;
 
-	root /var/www/html/bombapeniana-xtrapower;
+	root /var/www/html/produtos/bombapeniana-xtrapower;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -180,24 +229,29 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/bombapeniana.xtrapoweroficial.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 }
-ln -s /etc/nginx/sites-available/bombapeniana-xtrapower.conf ../sites-enabled/bombapeniana-xtrapower
+
 ~~~ -->
 
 ## SkinGold
 * https://skingoldcare.com/
-* 
-Porta: http://68.183.150.108:8077
+ 
 <!-- ~~~
-/etc/nginx/sites-available/$
-sudo nano skingold.conf
 server {
-	listen 8077;
-	listen [::]:8077;
+	listen 80;
+	listen [::]:80;
 
-        server_name 68.183.150.108:8077;
+        server_name www.skingoldcare.com skingoldcare.com;
 
-	root /var/www/html/skingold;
+	root /var/www/html/produtos/skingold;
 	index index.html index.htm index.nginx-debian.html;
 
 	location / {
@@ -205,56 +259,32 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ /index.html =404;
 	}
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/www.skingoldcare.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/www.skingoldcare.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
 }
-ln -s /etc/nginx/sites-available/skingold.conf ../sites-enabled/skingold
+
 ~~~ -->
 
+# Dominios
 
-<!-- grep -rl 'qwerty' ./| xargs sed -i's/qwerty/poiuy/g' -->
-
-
+<!-- omit in toc --> 
+<!-- 
+http://saudequeimpressiona.com/ 
+-->
 
 # Advertoriais
 
-Varios dominios para qq adv
-<!-- 
-https://www.digitalocean.com/community/tutorials/como-utilizar-o-sftp-para-transferir-arquivos-com-seguranca-com-um-servidor-remoto-pt
-##
-* https://
-  * http://68.183.150.108:8080/
+## Fora da ilha - Localweb
 
-# Servidor de paginas
-## Listando /var/www/html
-~~~
-drwxr-xr-x 2 root root 4096 Apr  4 00:07 api-nextlevel
-drwxr-xr-x 2 root root 4096 Apr  4 00:05 bombapeniana-xtrapower
-drwxr-xr-x 2 root root 4096 Apr  4 00:06 ev-nextlevel
-drwxr-xr-x 2 root root 4096 Apr  4 00:03 gel-xtrapower
-drwxr-xr-x 2 root root 4096 Apr  4 00:06 nextlevel
-drwxr-xr-x 2 root root 4096 Apr  4 00:05 skingold
-drwxr-xr-x 2 root root 4096 Apr  4 00:04 tesaodevaca-xtrapower
-drwxr-xr-x 2 root root 4096 Apr  4 00:07 xtrapower
-~~~
+### https://crescerbembrasil.com
 
-## criando portas
-ufw status
-ufw allow 8070
-ufw allow 8071
-ufw allow 8072
-ufw allow 8073
-ufw allow 8074
-ufw allow 8075
-ufw allow 8076
-ufw allow 8077
+### https://ultracuriosoblog.com
 
-# Tutoriais
-
-Simulando na porta 
--->
-<!-- https://bobcares.com/blog/digitalocean-open-port-8080/ -->
-<!-- 
-# Outros itens
-
-sudo service nginx restart
- -->
-
+### https://xbrasilvideos.com
