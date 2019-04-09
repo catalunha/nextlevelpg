@@ -8,7 +8,49 @@
     <link rel="shortcut icon" href="xtrapowergel/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="xtrapowergel/css/bootstrap.min.css">
     <link rel="stylesheet" href="xtrapowergel/css/style.css">
+     
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        
+        // PIXEL MAR        
+        fbq('init', '2228586033871189'); //SSM1     ok
+        fbq('init', '2443890665641488'); //MSPV1    ok
+        fbq('init', '596630264133794'); // LMF1     ok
 
+        //PIXEL IAG        
+        fbq('init', '312681276121595'); // ACA1     ok
+        fbq('init', '708190072932859'); // RCA1     ok
+        fbq('init', '357465071785195'); // RCA1.2   ok
+        fbq('init', '427619021320828'); // RCA1.3   ok        
+        fbq('init', '586908575124629'); //GERAL     ok
+
+        //PIXEL WES
+        fbq('init', '1070462153160658'); // JAF1    ok
+        fbq('init', '578145445983333'); // WN1      ok
+        fbq('init', '2069935243326259'); // MP1     ok
+        
+        //EVENTO
+        fbq('track', 'ViewContent'); 
+
+    </script>
+    
     <title>XtraPowerGel</title>
 </head>
 
