@@ -1,0 +1,147 @@
+/*GENERAL*/
+@font-face { font-family: "SourceSansPro-Bold"; src: url("../fonts/SourceSansPro-Bold.ttf"); }
+
+@font-face { font-family: "SourceSansPro-Regular"; src: url("../fonts/SourceSansPro-Regular.ttf"); }
+
+@font-face { font-family: "SourceSansPro-Light"; src: url("../fonts/SourceSansPro-Light.ttf"); }
+
+body { font-family: "SourceSansPro-Regular", Helvetica, sans-serif; color: #444; background-image: url(../img/bg2.png); background-attachment: fixed; }
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+/*HEADER*/
+header nav #nav-sup { background-color: #333; padding: 15px; }
+
+header nav #nav-sup .logo { font-family: "SourceSansPro-Bold", Helvetica, Arial, sans-serif; text-transform: uppercase; line-height: 1; text-align: center; font-size: 3rem; color: #fff; letter-spacing: 3px; font-weight: bold; font-style: italic; }
+
+header nav #nav-sup .logo i { display: inline-block; vertical-align: sub; width: 60px; height: 60px; background-image: url(../img/logo.png); background-size: contain; background-color: #3d7f9e; border-radius: 100%; }
+
+header nav #nav-sup .logo span { display: inline-block; background: #1f73a5; background: -moz-linear-gradient(200deg, #1f73a5 60%, #00d4ff 100%); background: -webkit-linear-gradient(200deg, #1f73a5 60%, #00d4ff 100%); background: -webkit-linear-gradient(250deg, #1f73a5 60%, #00d4ff 100%); background: -o-linear-gradient(250deg, #1f73a5 60%, #00d4ff 100%); background: linear-gradient(200deg, #1f73a5 60%, #00d4ff 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f73a5",endColorstr="#00d4ff",GradientType=1); padding: 15px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-top-left-radius: 30px; }
+
+header nav #nav-sup .icons { text-align: right; margin-top: 25px; }
+
+header nav #nav-sup .icons ul { margin: 0px; padding: 0px; }
+
+header nav #nav-sup .icons ul li { list-style: none; width: 25px; height: 25px; display: inline-block; margin-right: 10px; }
+
+header nav #nav-sup .icons ul li:last-child { margin-left: 30px; }
+
+header nav #nav-sup .icons ul li i { cursor: pointer; display: block; width: 100%; height: 100%; background-image: url(../img/sprite-icons.png); background-size: cover; opacity: 0.6; transition: opacity 0.2s; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; -ms-transition: opacity 0.2s; -o-transition: opacity 0.2s; }
+
+header nav #nav-sup .icons ul li i:hover { opacity: 1; }
+
+header nav #nav-sup .icons ul li #fb { background-position: 0px 0px; }
+
+header nav #nav-sup .icons ul li #ig { background-position: -25px 0px; }
+
+header nav #nav-sup .icons ul li #tt { background-position: -50px 0px; }
+
+header nav #nav-sup .icons ul li #wp { background-position: -75px 0px; }
+
+header nav #nav-sup .icons ul li #menu { background-position: -100px 0px; }
+
+/*WRAPPER*/
+#wrapper { margin: 15px auto; /*SIDEBAR*/ /*CONTENT*/ }
+
+#wrapper #sidebar { width: 25%; float: right; margin-top: -15px; }
+
+#wrapper #sidebar .box-itens { margin-top: 15px; background-color: #fff; border: 1px solid #eaeaea; border-bottom: 3px solid #eaeaea; margin-left: 15px; padding: 15px; }
+
+#wrapper #sidebar .box-itens ul { padding-left: 20px; margin-bottom: 0px; }
+
+#wrapper #sidebar .box-itens ul li { padding: 3px 0px; }
+
+#wrapper #sidebar .box-itens ul li:hover { cursor: pointer; color: #3d7f9e; }
+
+#wrapper #content { background-color: #fff; border: 1px solid #eaeaea; width: 75%; padding: 15px; }
+
+#wrapper #content .box-title .title { text-transform: uppercase; color: #3d7f9e; }
+
+#wrapper #content .box-title .title h1 { font-size: 2rem; letter-spacing: 2px; font-weight: bold; }
+
+#wrapper #content .box-title .subtitle { color: #777; font-style: italic; }
+
+#wrapper #content .box-title .subtitle h2 { font-size: 1.5rem; }
+
+#wrapper #content .box-title .title-text { color: #80c7e8; margin: 30px 0px 15px; }
+
+#wrapper #content .box-title .title-text h3 { font-size: 1.5rem; text-transform: uppercase; font-weight: bold; }
+
+#wrapper #content .box-img { margin: 15px 0px; }
+
+#wrapper #content .box-img img { width: 100%; }
+
+#wrapper #content .box-img .legend { background-color: #444; color: #fff; font-size: 0.9rem; padding: 10px; }
+
+#wrapper #content .box-img .legend p { margin-bottom: 0px; }
+
+#wrapper #content .box-text { font-family: 'SourceSansPro-Light', Helvetica, Arial, sans-serif; margin-bottom: 15px; }
+
+#wrapper #content .box-text p, #wrapper #content .box-text ul { font-size: 1.2rem; text-align: justify; }
+
+#wrapper #content .box-btn { text-align: center; margin-bottom: 15px; }
+
+#wrapper #content .box-btn a { font-weight: bold; letter-spacing: 2px; text-transform: uppercase; display: inline-block; font-family: "Roboto", Arial, Helvetica, sans-serif; border-radius: 3px; font-size: 2rem; line-height: 1.5; color: #fff; background: #0b6c17; background: -webkit-gradient(linear, left bottom, left top, from(#0b6c17), to(#13b327)); background: -webkit-linear-gradient(bottom, #0b6c17 0%, #13b327 100%); background: -o-linear-gradient(bottom, #0b6c17 0%, #13b327 100%); background: linear-gradient(0deg, #0b6c17 0%, #13b327 100%); -webkit-box-shadow: 0px 5px 1px #05420c; box-shadow: 0px 3px 0px #05420c; -webkit-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; padding: 10px 30px; }
+
+#wrapper #content .box-btn a:hover { transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); }
+
+#wrapper #content .recommended { border-top: 5px solid #cdcdcd; margin-top: 15px; padding: 15px 0px; }
+
+#wrapper #content .recommended .box-recommended { padding: 5px; background-color: #f3f3f3; border-bottom: 2px solid #c1c1c1; border-radius: 3px; margin-bottom: 15px; }
+
+#wrapper #content .recommended .box-recommended .img-rec { cursor: pointer; overflow: hidden; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; }
+
+#wrapper #content .recommended .box-recommended .img-rec img { transition: all 0.3s; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; width: 100%; }
+
+#wrapper #content .recommended .box-recommended .text-rec { cursor: pointer; padding: 5px; color: #555; }
+
+#wrapper #content .recommended .box-recommended .text-rec p { margin-bottom: 0px; }
+
+#wrapper #content .recommended .box-recommended:hover img { transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); }
+
+/*FOOTER*/
+footer { background-color: #2b2c2d; color: #fff; padding: 15px 0px; text-align: justify; }
+
+footer .container { background-color: #2b2c2d !important; }
+
+footer .title-footer { text-align: center; }
+
+footer hr { border-color: #525252; }
+
+footer .copy-right { font-weight: bold; }
+
+footer .links { text-align: right; }
+
+footer .links a { color: #ccc; font-weight: bold; }
+
+footer .copy-right, footer .links { text-align: center; }
+
+@media (max-width: 991.98px) { header nav #nav-sub .search { display: none; }
+  #wrapper #sidebar { display: none; }
+  #wrapper #content { width: 100%; } }
+
+@media (max-width: 767.98px) { header nav #nav-sup .country { display: none; }
+  header nav #nav-sup .icons { text-align: center; }
+  header nav #nav-sub .logo { text-align: center; }
+  #wrapper #content .box-title .title h1 { font-size: 2rem; }
+  #wrapper #content .box-title .subtitle h2 { font-size: 1.2rem; }
+  #wrapper #content .box-title .title-text h3 { font-size: 1.5rem; }
+  #wrapper #content .box-text p, #wrapper #content .box-text ul { font-size: 1rem; }
+  #wrapper #content .box-btn a { font-size: 1.5rem; } }
+
+@media (max-width: 575.98px) { header nav { margin-bottom: 15px; }
+  header nav #nav-sub { padding: 15px 0px; }
+  header nav #nav-sub .news { display: none; }
+  #wrapper #content { padding: 0px; }
+  #wrapper #content .box-title .title h1 { font-size: 1.5rem; text-align: center; }
+  #wrapper #content .box-title .subtitle h2 { font-size: 1rem; }
+  #wrapper #content .box-title .title-text { text-align: center; margin: 0px; }
+  #wrapper #content .box-title .title-text h3 { font-size: 1.2rem; }
+  #wrapper #content .box-img .legend { padding: 5px; }
+  #wrapper #content .box-img .legend p { font-size: 0.8rem; }
+  #wrapper #content .box-text p { font-size: 0.9rem; }
+  #wrapper #content .box-text ul { font-size: 0.9rem; padding-left: 15px; }
+  #wrapper #content .box-btn a { font-size: 0.9rem; padding: 10px 15px; }
+  footer { font-size: 0.8rem; } }
